@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Регистрация студента</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- =========================================
+     ФОН
+========================================= -->
+
+<div class="background"></div>
+
+<div class="background-dark"></div>
+
+<div class="grain"></div>
+
+
+<!-- =========================================
+     ВЕРХНЯЯ ПАНЕЛЬ
+========================================= -->
+
+<header class="top">
+
+    <div class="logo">
+        <span>「</span>STUDENT<span>」</span>
+    </div>
+
+    <div class="registration-number">
+        01 / REGISTRATION
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     ОСНОВНОЙ КОНТЕНТ
+========================================= -->
+
+<main class="page">
+
+
+    <!-- Декоративная надпись -->
+
+    <div class="japanese">
+        学<br>
+        生<br>
+        登<br>
+        録
+    </div>
+
+
+    <!-- =====================================
+         ФОРМА
+    ====================================== -->
+
+    <section class="form-card">
+
+
+        <!-- Заголовок -->
+
+        <div class="form-heading">
+
+            <div class="form-label">
+                STUDENT FORM
+            </div>
+
+            <h1>
+                Регистрация<br>
+                <span>студента.</span>
+            </h1>
+
+            <p>
+                Заполните форму, чтобы зарегистрировать
+                студента в системе.
+            </p>
+
+        </div>
+
+
+        <!-- =================================
+             ФОРМА
+        ================================== -->
+
+        <form id="registrationForm">
+
+
+            <!-- Первая строка -->
+
+            <div class="form-row">
+
+
+                <!-- Имя -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Имя
+                    </label>
+
+                    <div class="input-box">
+
+                        <span class="input-icon">
+                            ♙
+                        </span>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Введите имя"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Фамилия -->
+
+                <div class="form-group">
+
+                    <label for="surname">
+                        Фамилия
+                    </label>
+
+                    <div class="input-box">
+
+                        <span class="input-icon">
+                            ♙
+                        </span>
+
+                        <input
+                            type="text"
+                            id="surname"
+                            name="surname"
+                            placeholder="Введите фамилию"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Вторая строка -->
+
+            <div class="form-row">
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <div class="input-box">
+
+                        <span class="input-icon">
+                            ✉
+                        </span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@gmail.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Телефон -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Телефон
+                    </label>
+<div class="input-box">
+
+                        <span class="input-icon">
+                            ☎
+                        </span>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+996 XXX XXX XXX"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Третья строка -->
+
+            <div class="form-row">
+
+
+                <!-- Пароль -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Пароль
+                    </label>
+
+                    <div class="input-box">
+
+                        <span class="input-icon">
+                            ♙
+                        </span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Введите пароль"
+                            minlength="6"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            id="showPassword"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Дата -->
+
+                <div class="form-group">
+
+                    <label for="birthday">
+                        Дата рождения
+                    </label>
+
+                    <div class="input-box">
+
+                        <span class="input-icon">
+                            □
+                        </span>
+
+                        <input
+                            type="date"
+                            id="birthday"
+                            name="birthday"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Пол -->
+
+            <div class="form-group gender-group">
+
+                <label>
+                    Пол
+                </label>
+
+                <div class="gender">
+
+
+                    <label class="radio">
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Мужской"
+                            required
+                        >
+
+                        <span class="radio-circle"></span>
+
+                        Мужской
+
+                    </label>
+
+
+                    <label class="radio">
+
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Женский"
+                        >
+
+                        <span class="radio-circle"></span>
+
+                        Женский
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Четвёртая строка -->
+
+            <div class="form-row">
+
+
+                <!-- Специальность -->
+
+                <div class="form-group">
+
+                    <label for="specialty">
+                        Специальность
+                    </label>
+
+                    <div class="input-box select-box">
+
+                        <span class="input-icon">
+                            ◇
+                        </span>
+
+                        <select
+                            id="specialty"
+                            name="specialty"
+                            required
+                        >
+
+                            <option value="">
+                                Выберите специальность
+                            </option>
+
+                            <option>
+                                Бизнес-информатика
+                            </option>
+<option>
+                                Информационные системы
+                            </option>
+
+                            <option>
+                                Программирование
+                            </option>
+
+                            <option>
+                                Компьютерные науки
+                            </option>
+
+                            <option>
+                                Экономика
+                            </option>
+
+                            <option>
+                                Менеджмент
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Курс -->
+
+                <div class="form-group">
+
+                    <label for="course">
+                        Курс
+                    </label>
+
+                    <div class="input-box select-box">
+
+                        <span class="input-icon">
+                            ▣
+                        </span>
+
+                        <select
+                            id="course"
+                            name="course"
+                            required
+                        >
+
+                            <option value="">
+                                Выберите курс
+                            </option>
+
+                            <option>
+                                1 курс
+                            </option>
+
+                            <option>
+                                2 курс
+                            </option>
+
+                            <option>
+                                3 курс
+                            </option>
+
+                            <option>
+                                4 курс
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Комментарий -->
+
+            <div class="form-group">
+
+                <label for="comment">
+                    Комментарий
+                </label>
+
+                <div class="textarea-box">
+
+                    <span class="textarea-icon">
+                        ▤
+                    </span>
+
+                    <textarea
+                        id="comment"
+                        name="comment"
+                        placeholder="Введите комментарий..."
+                        rows="5"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- Согласие -->
+
+            <label class="agreement">
+
+                <input
+                    type="checkbox"
+                    id="agreement"
+                    required
+                >
+
+                <span class="custom-checkbox"></span>
+
+                <span>
+                    Я согласен с
+                    <u>правилами</u>
+                </span>
+
+            </label>
+
+
+            <!-- Кнопки -->
+
+            <div class="buttons">
+
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+
+                    ЗАРЕГИСТРИРОВАТЬСЯ
+
+                    <span>↗</span>
+
+                </button>
+
+
+                <button
+                    type="reset"
+                    class="clear-button"
+                >
+
+                    ОЧИСТИТЬ
+
+                </button>
+
+            </div>
+
+
+            <!-- Сообщение -->
+
+            <div
+                id="message"
+                class="message"
+            ></div>
+
+
+            <!-- Подсказка -->
+
+            <div class="required-text">
+
+                <span></span>
+
+                Заполните все обязательные поля
+
+                <span></span>
+
+            </div>
+
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <span>
+        STUDENT REGISTRATION
+    </span>
+
+    <span>
+        © 2026
+    </span>
+
+</footer>
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+
+/* =========================================
+   ФОРМА
+========================================= */
+
+const form =
+    document.getElementById("registrationForm");
+
+const message =
+    document.getElementById("message");
+
+
+form.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+        message.textContent =
+            "Регистрация успешно выполнена.";
+
+        message.classList.add("success");
+
+    }
+);
+
+
+form.addEventListener(
+    "reset",
+    function() {
+
+        message.textContent = "";
+
+        message.classList.remove("success");
+
+    }
+);
+
+
+/* =========================================
+   ПОКАЗАТЬ / СКРЫТЬ ПАРОЛЬ
+========================================= */
+
+const password =
+    document.getElementById("password");
+
+const showPassword =
+    document.getElementById("showPassword");
+
+
+showPassword.addEventListener(
+    "click",
+    function() {
+
+        if (password.type === "password") {
+
+            password.type = "text";
+
+            showPassword.textContent = "◉";
+
+        } else {
+
+            password.type = "password";
+
+            showPassword.textContent = "○";
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1079 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap'
+);
+
+
+/* =========================================
+   ОСНОВА
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: #090b0e;
+
+    color: #ddd9d1;
+
+    font-family: "Inter", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ФОТО НА ЗАДНЕМ ФОНЕ
+========================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -3;
+
+    background-image:
+        url("photo.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   ЗАТЕМНЕНИЕ ФОТО
+========================================= */
+
+.background-dark {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(5,7,10,0.82),
+            rgba(5,7,10,0.45),
+            rgba(5,7,10,0.72)
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(5,7,10,0.60),
+            rgba(5,7,10,0.35) 35%,
+            rgba(5,7,10,0.80)
+        );
+
+    backdrop-filter:
+        blur(1px);
+}
+
+
+/* =========================================
+   ЗЕРНИСТОСТЬ
+========================================= */
+
+.grain {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    opacity: 0.055;
+
+    background-image:
+        url(
+            "data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"
+        );
+
+    mix-blend-mode: screen;
+}
+
+
+/* =========================================
+   ВЕРХНЯЯ ПАНЕЛЬ
+========================================= */
+
+.top {
+
+    width: min(1180px, 90%);
+
+    margin: auto;
+
+    padding: 32px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom:
+        1px solid rgba(220,215,205,0.15);
+}
+
+
+.logo {
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    color: #e2ded5;
+}
+
+
+.logo span {
+
+    color: #9d998f;
+}
+
+
+.registration-number {
+
+    color: #aaa69d;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.page {
+
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    position: relative;
+
+    padding:
+        80px 0 120px;
+}
+
+
+/* =========================================
+   ЯПОНСКИЕ СИМВОЛЫ
+========================================= */
+
+.japanese {
+
+    position: fixed;
+
+    left: 5%;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    z-index: 0;
+
+    color:
+        rgba(225,220,210,0.45);
+
+    font-family:
+        serif;
+
+    font-size: 24px;
+
+    line-height: 1.7;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 20px rgba(0,0,0,0.8);
+}
+
+
+/* =========================================
+   ФОРМА
+========================================= */
+
+.form-card {
+
+    width: min(700px, 100%);
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 48px 52px;
+
+    border:
+        1px solid
+        rgba(220,215,205,0.30);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(12,15,19,0.78),
+            rgba(9,11,14,0.65)
+        );
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    box-shadow:
+        0 35px 100px
+        rgba(0,0,0,0.65);
+}
+
+
+/* =========================================
+   ЗАГОЛОВОК
+========================================= */
+
+.form-heading {
+
+    padding-bottom: 30px;
+
+    margin-bottom: 28px;
+border-bottom:
+        1px solid
+        rgba(220,215,205,0.22);
+}
+
+
+.form-label {
+
+    margin-bottom: 14px;
+
+    color: #aaa69d;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+.form-heading h1 {
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        clamp(42px, 6vw, 62px);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    color: #eeeae2;
+
+    margin-bottom: 22px;
+}
+
+
+.form-heading h1 span {
+
+    color: #aaa59b;
+}
+
+
+.form-heading p {
+
+    max-width: 480px;
+
+    color: #92918c;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   СТРОКИ
+========================================= */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 28px;
+}
+
+
+.form-group {
+
+    margin-bottom: 22px;
+}
+
+
+.form-group > label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #c1bdb4;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-box {
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    border:
+        1px solid
+        rgba(220,215,205,0.20);
+
+    background:
+        rgba(10,12,15,0.52);
+
+    transition: 0.3s;
+}
+
+
+.input-box:focus-within {
+
+    border-color:
+        rgba(220,215,205,0.55);
+
+    background:
+        rgba(10,12,15,0.70);
+
+    box-shadow:
+        0 0 20px
+        rgba(220,215,205,0.04);
+}
+
+
+.input-icon {
+
+    width: 42px;
+
+    text-align: center;
+
+    color: #aaa69e;
+
+    font-size: 17px;
+
+    opacity: 0.8;
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding:
+        0 12px 0 2px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ddd9d1;
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 12px;
+}
+
+
+input::placeholder {
+
+    color: #777770;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+input[type="date"] {
+
+    color-scheme: dark;
+}
+
+
+/* =========================================
+   PASSWORD
+========================================= */
+
+.show-password {
+
+    width: 45px;
+
+    height: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777873;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.select-box {
+
+    position: relative;
+}
+
+
+select {
+
+    appearance: none;
+
+    cursor: pointer;
+
+    padding-right: 30px;
+}
+
+
+select option {
+
+    background: #15181c;
+
+    color: #ddd9d1;
+}
+
+
+.select-box::after {
+
+    content: "⌄";
+
+    position: absolute;
+
+    right: 14px;
+
+    top: 14px;
+
+    color: #898780;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   ПОЛ
+========================================= */
+
+.gender-group {
+
+    margin-top: 3px;
+}
+
+
+.gender {
+
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 5px;
+}
+
+
+.radio {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #aaa9a2;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+.radio input {
+
+    display: none;
+}
+
+
+.radio-circle {
+
+    width: 18px;
+
+    height: 18px;
+
+    border:
+        1px solid
+        rgba(220,215,205,0.45);
+
+    border-radius: 50%;
+
+    position: relative;
+}
+
+
+.radio input:checked
++ .radio-circle {
+
+    border-color: #ddd8ce;
+}
+
+
+.radio input:checked
++ .radio-circle::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 8px;
+
+    top: 4px;
+
+    left: 4px;
+
+    border-radius: 50%;
+
+    background: #ddd8ce;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.textarea-box {
+
+    position: relative;
+
+    display: flex;
+
+    min-height: 110px;
+
+    border:
+        1px solid
+        rgba(220,215,205,0.20);
+
+    background:
+        rgba(10,12,15,0.52);
+}
+
+
+.textarea-box:focus-within {
+
+    border-color:
+        rgba(220,215,205,0.55);
+}
+
+
+.textarea-icon {
+
+    padding:
+        14px 0 0 14px;
+color: #aaa69e;
+
+    font-size: 16px;
+}
+
+
+textarea {
+
+    width: 100%;
+
+    min-height: 108px;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    outline: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ddd9d1;
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 12px;
+}
+
+
+textarea::placeholder {
+
+    color: #777770;
+}
+
+
+/* =========================================
+   CHECKBOX
+========================================= */
+
+.agreement {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 26px;
+
+    color: #9c9a94;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.agreement input {
+
+    display: none;
+}
+
+
+.custom-checkbox {
+
+    width: 18px;
+
+    height: 18px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        rgba(220,215,205,0.45);
+
+    background:
+        rgba(0,0,0,0.25);
+
+    position: relative;
+}
+
+
+.agreement input:checked
++ .custom-checkbox {
+
+    background: #d0cbc0;
+
+    border-color: #d0cbc0;
+}
+
+
+.agreement input:checked
++ .custom-checkbox::after {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 3px;
+
+    top: -1px;
+
+    color: #111317;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.agreement u {
+
+    color: #d0cbc0;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   КНОПКИ
+========================================= */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 0.75fr;
+
+    gap: 20px;
+
+    margin-top: 28px;
+}
+
+
+.register-button {
+
+    height: 48px;
+
+    border: none;
+
+    background: #d0cbc0;
+
+    color: #15171a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.register-button span {
+
+    margin-left: 12px;
+
+    font-size: 16px;
+}
+
+
+.register-button:hover {
+
+    background: #e0dbd1;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.35);
+}
+
+
+.clear-button {
+
+    height: 48px;
+
+    border:
+        1px solid
+        rgba(220,215,205,0.35);
+
+    background:
+        rgba(0,0,0,0.15);
+
+    color: #b1aea6;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.clear-button:hover {
+
+    border-color:
+        rgba(220,215,205,0.65);
+
+    color: #e0dcd3;
+}
+
+
+/* =========================================
+   СООБЩЕНИЕ
+========================================= */
+
+.message {
+
+    min-height: 18px;
+
+    margin-top: 16px;
+
+    text-align: center;
+
+    color: #aaa69e;
+
+    font-size: 11px;
+}
+
+
+.message.success {
+
+    color: #d2cdc3;
+}
+
+
+/* =========================================
+   НИЖНЯЯ НАДПИСЬ
+========================================= */
+
+.required-text {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 28px;
+
+    color: #777873;
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+
+.required-text span {
+
+    width: 60px;
+
+    height: 1px;
+
+    background:
+        rgba(220,215,205,0.25);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    width: min(1180px, 90%);
+
+    margin: auto;
+
+    padding:
+        28px 0 35px;
+
+    border-top:
+        1px solid
+        rgba(220,215,205,0.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #88867f;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   АДАПТИВ
+========================================= */
+
+@media (max-width: 800px) {
+
+    .page {
+
+        padding:
+            50px 0 80px;
+    }
+
+
+    .japanese {
+
+        left: 2%;
+
+        opacity: 0.35;
+
+        font-size: 18px;
+    }
+
+
+    .form-card {
+
+        padding:
+            38px 32px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .top {
+
+        padding: 22px 0;
+    }
+
+
+    .logo {
+
+        font-size: 14px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .registration-number {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .form-card {
+padding:
+            32px 22px;
+    }
+
+
+    .form-heading h1 {
+
+        font-size: 45px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .buttons {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .japanese {
+
+        display: none;
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .page {
+
+        width: 94%;
+    }
+
+
+    .form-card {
+
+        padding:
+            28px 18px;
+    }
+
+
+    .form-heading h1 {
+
+        font-size: 40px;
+    }
+
+
+    .gender {
+
+        gap: 20px;
+    }
+
+
+    .required-text span {
+
+        width: 30px;
+    }
+
+}
